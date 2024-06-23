@@ -4,9 +4,20 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: Test123456
+
   mybatis:
     mapper-locations: classpath:mapper/*.xml
     type-aliases-package: com.code4faster.perfmanauthservice.model
+
+  redis:
+      host: 127.0.0.1
+      port: 6379
+      timeout: 6000
+      jedis:
+        pool:
+          max-active: 20
+          max-idle: 10
+          min-idle: 5
 
 security:
   jwt:
