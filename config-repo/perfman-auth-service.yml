@@ -23,6 +23,9 @@ security:
   jwt:
     secret: perfmansecretkey
     expiration: 3600000
+  user:
+    name: admin
+    password: admin
 
 eureka:
   client:
