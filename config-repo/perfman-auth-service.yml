@@ -5,10 +5,6 @@ spring:
     username: root
     password: Test123456
 
-  mybatis:
-    mapper-locations: classpath*:mapper/*.xml
-    type-aliases-package: com.code4faster.perfmanauthservice.model
-
   redis:
     host: 127.0.0.1
     port: 6379
@@ -30,6 +26,10 @@ spring:
           auth: false
           starttls:
             enable: false
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.code4faster.perfmanauthservice.model
 
 security:
   jwt:
