@@ -27,6 +27,18 @@ spring:
           starttls:
             enable: false
 
+grpc:
+  client:
+    idService:
+      address: 'static://localhost:9090'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+    tokenService:
+      address: 'static://localhost:9090'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+
+
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
   type-aliases-package: com.code4faster.perfmanauthservice.model
